@@ -1,0 +1,91 @@
+{
+  "$schema": "LLM-agnostic skill semantic verb mapping v1.0",
+  "verbs": {
+    "read": {
+      "description": "Read file or search codebase",
+      "mappings": {
+        "claude": ["Read", "Glob", "Grep"],
+        "hermes": ["read_file", "search_files"],
+        "generic": ["cat", "grep", "find"]
+      }
+    },
+    "write": {
+      "description": "Create or modify a file",
+      "mappings": {
+        "claude": ["Write", "Edit"],
+        "hermes": ["write_file", "patch"],
+        "generic": ["echo >", "sed -i"]
+      }
+    },
+    "execute": {
+      "description": "Run a shell command",
+      "mappings": {
+        "claude": ["Bash"],
+        "hermes": ["terminal"],
+        "generic": ["sh", "bash"]
+      }
+    },
+    "search": {
+      "description": "Web search or fetch URL",
+      "mappings": {
+        "claude": ["web_search", "web_fetch"],
+        "hermes": ["web_extract"],
+        "generic": ["curl"]
+      }
+    },
+    "spawn": {
+      "description": "Create a sub-agent for a task",
+      "mappings": {
+        "claude": ["Agent"],
+        "hermes": ["delegate_task"],
+        "generic": [null]
+      }
+    },
+    "review": {
+      "description": "Spawn an adversarial reviewer sub-agent",
+      "mappings": {
+        "claude": ["Agent(subagent_type=code-reviewer)"],
+        "hermes": ["delegate_task(adversarial)"],
+        "generic": [null]
+      }
+    },
+    "verify": {
+      "description": "Check file existence and permissions",
+      "mappings": {
+        "claude": ["Read", "Bash(ls -la)"],
+        "hermes": ["read_file", "terminal(ls)"],
+        "generic": ["ls", "test -f"]
+      }
+    },
+    "validate": {
+      "description": "Run tests, linters, schema checks",
+      "mappings": {
+        "claude": ["Bash(pytest)", "Bash(eslint)"],
+        "hermes": ["terminal(pytest)", "terminal(eslint)"],
+        "generic": ["pytest", "eslint"]
+      }
+    },
+    "notify": {
+      "description": "Send message to user or platform",
+      "mappings": {
+        "claude": ["(print to user)"],
+        "hermes": ["(gateway message)"],
+        "generic": ["echo"]
+      }
+    },
+    "store": {
+      "description": "Persist data to memory, database, or file",
+      "mappings": {
+        "claude": ["Write"],
+        "hermes": ["write_file"],
+        "generic": ["echo >", "sqlite3"]
+      }
+    }
+  },
+  "backends": {
+    "claude": { "name": "Claude Code", "detect": "CLAUDE_CODE env or .claude/ exists" },
+    "hermes": { "name": "Hermes Agent", "detect": "HERMES_HOME env or ~/.hermes/ exists" },
+    "codex": { "name": "OpenAI Codex CLI", "detect": "CODEX_HOME env or ~/.codex/ exists" },
+    "generic": { "name": "Generic CLI tools", "detect": "fallback" }
+  }
+}
