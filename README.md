@@ -22,29 +22,7 @@ That's the problem CheckGrow solves: **your AI produces output, but who checks i
 | You learn nothing from the interaction | Every session grows your personal knowledge base |
 | Same mistakes repeat across sessions | Delivery gate enforces learning capture |
 | Config files drift into format chaos | Format check catches drift before it degrades AI behavior |
-
----
-
-## If you already use Hermes
-
-Hermes gives your AI **memory and skills**. CheckGrow gives your AI output **accountability**.
-
-| Hermes | CheckGrow |
-|---|---|
-| Gives your AI long-term memory | Gives your AI output adversarial review |
-| Extends what your AI can DO | Checks what your AI DID |
-| Skills run during tasks | Gate runs before delivery |
-| Auto-creates skills from experience | Auto-enforces learning capture from sessions |
-
----
-
-## Quick start
-
-```bash
-# Install the delivery gate (30 seconds)
-curl -O https://raw.githubusercontent.com/YuhaoLin2005/checkgrow/main/delivery-gate/quality-gate.py
-cp quality-gate.py ~/.claude/scripts/
-```
+| No idea how much your sessions cost | Metabolic tracking shows per-session cost + layered decisions |
 
 ---
 
@@ -83,9 +61,17 @@ checkgrow/
 
 CheckGrow's architecture independently converged with two production systems:
 
-**T-CBB (SwarmAI):** T-CBB's autonomous pipeline framework lists "Config Consistency" (OP8) as one of eight operational invariants — independently confirming that format uniformity across AI config files is a system-level requirement, not an aesthetic preference. T-CBB operates at pipeline boundaries; CheckGrow applies the same principle at the session level.
+**T-CBB (SwarmAI):** T-CBB's autonomous pipeline framework lists "Config Consistency" (OP8) as one of eight operational invariants — independently confirming that format uniformity across AI config files is a system-level requirement. The four-dimension quality gate (Completeness/Consistency/Groundedness/Honesty) converged with T-CBB's Output/Requirement/Contradiction/Evidence taxonomy. T-CBB operates at pipeline boundaries; CheckGrow applies the same principle at the session level.
 
-**Hermes Agent:** Hermes gives AI agents persistent memory and auto-created skills. CheckGrow adds the quality assurance layer — adversarial review, mechanical verification, and enforced learning capture — that sits alongside Hermes' skill execution.
+**Hermes Agent:** Hermes gives AI agents persistent memory and auto-created skills. CheckGrow adds the quality assurance layer — adversarial review, mechanical verification, enforced learning capture, and metabolic cost tracking — that sits alongside Hermes' skill execution.
+
+---
+
+## Acknowledgments
+
+CheckGrow exists because others shared their work first. See [ATTRIBUTIONS.md](ATTRIBUTIONS.md) for the full list.
+
+Special thanks to **xg-gh-25 (SwarmAI)** for the T-CBB review that pushed self-audit from v1.0 to v2.0 — finding the exact structural weakness in two sentences.
 
 ---
 
