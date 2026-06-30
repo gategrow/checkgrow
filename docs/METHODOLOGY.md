@@ -147,7 +147,7 @@ FIVE-STEP DECISION FLOW (five-step-decision-flow.md)
 | What specific failures the system defends against | [Failure Patterns](failure-patterns.md) |
 | How decisions get reviewed before implementation | [Five-Step Decision Flow](five-step-decision-flow.md) |
 | How CheckGrow relates to industrial systems | [T-CBB Convergence Notes](t-cbb-convergence.md) |
-| The running implementation | [delivery-gate](https://github.com/YuhaoLin2005/delivery-gate) |
+| The running implementation | [delivery-gate](https://github.com/gategrow/delivery-gate) |
 
 ---
 
