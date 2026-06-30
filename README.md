@@ -14,8 +14,9 @@ First time? Pick your path:
 
 | You want to... | Start here |
 |---|---|
+| Understand the whole framework | [METHODOLOGY.md](docs/METHODOLOGY.md) — core thesis, principles, how pieces connect |
 | Install the mechanical gate | [delivery-gate](https://github.com/YuhaoLin2005/delivery-gate) — two Python scripts, zero dependencies |
-| Understand AI failure patterns | [failure-patterns.md](docs/failure-patterns.md) — 10 patterns from real sessions |
+| Learn from real AI failures | [failure-patterns.md](docs/failure-patterns.md) — 10 patterns from real sessions |
 | Add adversarial review to your workflow | [adversarial-review/](adversarial-review/) — spawn review subagents |
 | Audit AI reasoning quality | [self-audit/](self-audit/) — four-dimension reasoning audit CLI |
 | Contribute a pattern or skill | [CONTRIBUTING.md](CONTRIBUTING.md) — open an issue first |
@@ -46,14 +47,15 @@ That's the problem CheckGrow solves: **your AI produces output, but who checks i
 
 ```
 checkgrow/
-├── adversarial-review/    Skill — spawn adversarial subagents (with Litmus Pre-Gate)
-├── self-audit/            Skill — mechanical Step 0 + four-dimension reasoning audit
-├── format-consistency/    Docs — detect config format drift (independently validated by T-CBB OP8)
 ├── docs/
+│   ├── METHODOLOGY.md                ★ Start here — the unified framework
 │   ├── failure-patterns.md          10 patterns catalogued from real sessions
 │   ├── five-step-decision-flow.md   Self-review → panel → confirm → implement → check
 │   ├── hybrid-gate-architecture.md  Mechanical + reasoning gate design
 │   └── t-cbb-convergence.md        Architecture convergence with SwarmAI's T-CBB
+├── adversarial-review/    Skill — spawn adversarial subagents (with Litmus Pre-Gate)
+├── self-audit/            Skill — mechanical Step 0 + four-dimension reasoning audit
+├── format-consistency/    Docs — detect config format drift (independently validated by T-CBB OP8)
 └── examples/
     └── broken-output.txt           Demo: deliberately broken AI output
 
@@ -62,6 +64,20 @@ Also available as standalone tools:
 ├── dual-pool-review → github.com/YuhaoLin2005/dual-pool-review
 └── self-audit pip package → github.com/YuhaoLin2005/self-audit
 ```
+
+---
+
+## Canonical Sources
+
+This repository is the **canonical source for the CheckGrow methodology**: failure patterns, hybrid gate architecture, decision flow, and the unified framework. The methodology defines *why* and *what*.
+
+| Aspect | Canonical source |
+|---|---|
+| Methodology (why, what) | **checkgrow** (this repo) — docs/ |
+| Python reference implementation | **[delivery-gate](https://github.com/YuhaoLin2005/delivery-gate)** — config-health.py + quality-gate.py |
+| Production deployment (Node.js) | **[ECC fork](https://github.com/YuhaoLin2005/ecc/blob/ec/ec.py)** — Stop hook with zero-config auto-trigger |
+
+**Implementation differences are by design, not drift.** Python reference has rationalization detection + config-health (full feature set). Node.js production fork removes rationalization (regex on non-English transcripts is unreliable) and adds zero-config auto-registration. If you're adding a feature, start with the Python reference implementation — it's the easiest to test and iterate on.
 
 ---
 
