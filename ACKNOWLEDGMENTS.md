@@ -10,7 +10,7 @@ The T-CBB autonomous pipeline framework independently converged on the same four
 - Autonomous Pipeline Design: [SwarmAI docs](https://github.com/xg-gh-25/SwarmAI/blob/main/docs/Autonomous-Pipeline-Design.md)
 - PR review that pushed self-audit from v1.0 to v2.0: [anthropics/skills#1367](https://github.com/anthropics/skills/pull/1367)
 
-Thank you for the review that found the exact structural weakness in two sentences.
+Thank you for the review that found the exact structural weakness in two sentences that I had walked past for weeks.
 
 **Hermes Agent — Nous Research**
 Hermes' skill format (YAML frontmatter, HARDLINE rules, conditional activation) shaped CheckGrow's skill standardization. The SKILL.md conventions used across CheckGrow skills are adapted from Hermes' open standard.
@@ -48,3 +48,7 @@ Accepted the format consistency anti-pattern as a community contribution.
 
 - **Python** — stdlib-only design philosophy
 - **Claude Code** — the agent harness that runs CheckGrow's hooks
+
+---
+
+*"If I have seen further, it is by standing on the shoulders of giants." — Isaac Newton*
