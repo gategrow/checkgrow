@@ -15,7 +15,7 @@ First time? Pick your path:
 | You want to... | Start here |
 |---|---|
 | Understand the whole framework | [METHODOLOGY.md](docs/METHODOLOGY.md) — core thesis, principles, how pieces connect |
-| Install the mechanical gate | [delivery-gate](https://github.com/YuhaoLin2005/delivery-gate) — two Python scripts, zero dependencies |
+| Install the mechanical gate | [delivery-gate](https://github.com/gategrow/delivery-gate) — two Python scripts, zero dependencies |
 | Learn from real AI failures | [failure-patterns.md](docs/failure-patterns.md) — 10 patterns from real sessions |
 | Add adversarial review to your workflow | [adversarial-review/](adversarial-review/) — spawn review subagents |
 | Audit AI reasoning quality | [self-audit/](self-audit/) — four-dimension reasoning audit CLI |
@@ -60,9 +60,9 @@ checkgrow/
     └── broken-output.txt           Demo: deliberately broken AI output
 
 Also available as standalone tools:
-├── delivery-gate → github.com/YuhaoLin2005/delivery-gate
-├── dual-pool-review → github.com/YuhaoLin2005/dual-pool-review
-└── self-audit pip package → github.com/YuhaoLin2005/self-audit
+├── delivery-gate → github.com/gategrow/delivery-gate
+├── dual-pool-review → github.com/gategrow/dual-pool-review
+└── self-audit pip package → github.com/gategrow/self-audit
 ```
 
 ---
@@ -74,7 +74,7 @@ This repository is the **canonical source for the CheckGrow methodology**: failu
 | Aspect | Canonical source |
 |---|---|
 | Methodology (why, what) | **checkgrow** (this repo) — docs/ |
-| Python reference implementation | **[delivery-gate](https://github.com/YuhaoLin2005/delivery-gate)** — config-health.py + quality-gate.py |
+| Python reference implementation | **[delivery-gate](https://github.com/gategrow/delivery-gate)** — config-health.py + quality-gate.py |
 | Production deployment (Node.js) | **[ECC fork](https://github.com/YuhaoLin2005/ecc/blob/ec/ec.py)** — Stop hook with zero-config auto-trigger |
 
 **Implementation differences are by design, not drift.** Python reference has rationalization detection + config-health (full feature set). Node.js production fork removes rationalization (regex on non-English transcripts is unreliable) and adds zero-config auto-registration. If you're adding a feature, start with the Python reference implementation — it's the easiest to test and iterate on.
@@ -105,8 +105,8 @@ CheckGrow's architecture independently converged with two production systems:
 
 Contributions welcome. Here's how to get involved:
 
-- **Found something wrong?** [Report a bug](https://github.com/YuhaoLin2005/checkgrow/issues/new?template=bug_report.md)
-- **Have a failure pattern to add?** [Propose it](https://github.com/YuhaoLin2005/checkgrow/issues/new?template=feature_request.md)
+- **Found something wrong?** [Report a bug](https://github.com/gategrow/checkgrow/issues/new?template=bug_report.md)
+- **Have a failure pattern to add?** [Propose it](https://github.com/gategrow/checkgrow/issues/new?template=feature_request.md)
 - **First time contributing?** Read [CONTRIBUTING.md](CONTRIBUTING.md)
 
 Maintained by [@YuhaoLin2005](https://github.com/YuhaoLin2005)
