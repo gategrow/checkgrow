@@ -8,6 +8,20 @@
 
 ---
 
+## Start Here
+
+First time? Pick your path:
+
+| You want to... | Start here |
+|---|---|
+| Install the mechanical gate | [delivery-gate](https://github.com/YuhaoLin2005/delivery-gate) — two Python scripts, zero dependencies |
+| Understand AI failure patterns | [failure-patterns.md](docs/failure-patterns.md) — 10 patterns from real sessions |
+| Add adversarial review to your workflow | [adversarial-review/](adversarial-review/) — spawn review subagents |
+| Audit AI reasoning quality | [self-audit/](self-audit/) — four-dimension reasoning audit CLI |
+| Contribute a pattern or skill | [CONTRIBUTING.md](CONTRIBUTING.md) — open an issue first |
+
+---
+
 ## A 200-line script. 4 rounds of review. 9 bugs found.
 
 **8 of those 9 were invisible to self-review.** The author stared at the same code for hours and saw nothing wrong. An adversarial subagent — told "you did NOT write this, find every bug" — caught them all in minutes.
@@ -68,6 +82,18 @@ CheckGrow's architecture independently converged with two production systems:
 **T-CBB (SwarmAI):** T-CBB's autonomous pipeline framework lists "Config Consistency" (OP8) as one of eight operational invariants. The four-dimension quality gate taxonomy converged across both systems. T-CBB operates at pipeline boundaries; CheckGrow applies the same principle at the session level. [See acknowledgments.](ACKNOWLEDGMENTS.md)
 
 **Hermes Agent:** Hermes gives AI agents persistent memory and auto-created skills. CheckGrow adds the quality assurance layer — adversarial review, mechanical verification, enforced learning capture, and metabolic cost tracking.
+
+---
+
+## Community
+
+Contributions welcome. Here's how to get involved:
+
+- **Found something wrong?** [Report a bug](https://github.com/YuhaoLin2005/checkgrow/issues/new?template=bug_report.md)
+- **Have a failure pattern to add?** [Propose it](https://github.com/YuhaoLin2005/checkgrow/issues/new?template=feature_request.md)
+- **First time contributing?** Read [CONTRIBUTING.md](CONTRIBUTING.md)
+
+Maintained by [@YuhaoLin2005](https://github.com/YuhaoLin2005)
 
 ---
 
