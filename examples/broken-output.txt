@@ -31,4 +31,4 @@ Expected self-audit findings:
 [GROUNDEDNESS] "500% velocity" — no measurement, no baseline
 [HONESTY] "ready for production" despite TODO item + SQL injection
 
-4 issues detected. Run: python3 self-audit/self_audit.py --file examples/broken-output.txt
+4 issues detected. Run: python3 -m self_audit --file examples/broken-output.txt

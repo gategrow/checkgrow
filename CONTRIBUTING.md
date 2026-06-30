@@ -22,11 +22,11 @@ Fix typos, clarify explanations, add diagrams. See `docs/` and `README.md`.
 Zero build. Just write:
 
 ```bash
-# Validate format consistency (if you touch config files)
+# Check semantic map coverage (if you touch config files)
 python3 adapt.py --check
 ```
 
-`adapt.py` is the only code — it validates config format conventions.
+`adapt.py` is the only code — it translates semantic verbs (like `{read}`) to concrete tool calls across LLM backends via `semantic-map.json`.
 
 ## Code Standards (for skills and config)
 

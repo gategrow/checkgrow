@@ -75,7 +75,7 @@ This repository is the **canonical source for the CheckGrow methodology**: failu
 |---|---|
 | Methodology (why, what) | **checkgrow** (this repo) — docs/ |
 | Python reference implementation | **[delivery-gate](https://github.com/gategrow/delivery-gate)** — config-health.py + quality-gate.py |
-| Production deployment (Node.js) | **[ECC fork](https://github.com/YuhaoLin2005/ecc/blob/ec/ec.py)** — Stop hook with zero-config auto-trigger |
+| Production deployment (Node.js) | **[ECC fork](https://github.com/YuhaoLin2005/ecc/blob/master/skills/delivery-gate/SKILL.md)** — Stop hook with zero-config auto-trigger |
 
 **Implementation differences are by design, not drift.** Python reference has rationalization detection + config-health (full feature set). Node.js production fork removes rationalization (regex on non-English transcripts is unreliable) and adds zero-config auto-registration. If you're adding a feature, start with the Python reference implementation — it's the easiest to test and iterate on.
 

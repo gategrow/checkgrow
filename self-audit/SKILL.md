@@ -142,7 +142,7 @@ Together they implement the T-CBB (Coding as Black Box) pattern: treat agent out
 
 ## See Also
 
-- `delivery-gate` — Mechanical Stop hook (checkgrow/delivery-gate)
+- `delivery-gate` — Mechanical Stop hook (gategrow/delivery-gate)
 - `adversarial-review` — Spawn adversarial subagents for code review
 - `code-reviewer` — Review code changes for correctness and quality
 - `security-review` — Identify vulnerabilities in the output
