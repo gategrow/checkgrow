@@ -62,6 +62,7 @@ checkgrow/
 Also available as standalone tools:
 ├── delivery-gate → github.com/gategrow/delivery-gate
 ├── dual-pool-review → github.com/gategrow/dual-pool-review
+├── session-cost → github.com/gategrow/session-cost
 └── self-audit pip package → github.com/gategrow/self-audit
 ```
 
@@ -118,6 +119,16 @@ Maintained by [@YuhaoLin2005](https://github.com/YuhaoLin2005)
 See [ACKNOWLEDGMENTS.md](ACKNOWLEDGMENTS.md). Special thanks to **xg-gh-25 (SwarmAI)** for the T-CBB review that found the exact structural weakness in self-audit v1.0 in two sentences.
 
 ---
+
+## Part of [gategrow](https://github.com/gategrow)
+
+| Repo | What |
+|------|------|
+| **[checkgrow](https://github.com/gategrow/checkgrow)** | Unified quality framework — start here |
+| **[delivery-gate](https://github.com/gategrow/delivery-gate)** | Stop hook for Claude Code |
+| **[self-audit](https://github.com/gategrow/self-audit)** | `pip install`-able four-dimension audit |
+| **[session-cost](https://github.com/gategrow/session-cost)** | L0→L3 layered cost tracking |
+| **[dual-pool-review](https://github.com/gategrow/dual-pool-review)** | Named-persona adversarial review methodology |
 
 ## License
 
