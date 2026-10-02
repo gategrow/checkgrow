@@ -21,6 +21,8 @@ First time? Pick your path:
 | Audit AI reasoning quality | [self-audit/](self-audit/) — four-dimension reasoning audit CLI |
 | Contribute a pattern or skill | [CONTRIBUTING.md](CONTRIBUTING.md) — open an issue first |
 
+For a minimal contributor setup, see [SETUP.md](SETUP.md).
+
 ---
 
 ## A 200-line script. 4 rounds of review. 9 bugs found.
